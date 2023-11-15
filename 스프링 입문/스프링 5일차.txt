@@ -1,0 +1,11 @@
+1. H2 데이터베이스 설치 TCP 접속
+JDBC 설정 : jdbc:h2:tcp://localhost/~/test  
+
+2. JDBC 설정 
+ - DataSourceUtils 
+
+3. @Transactional 어노테이션 
+ - Test 실행 후 ROLLBACK ( 테스트 케이스에 붙여있을 때만 )
+
+4. Spring JdbcTemplate [JDBC 반복적 코드 제거]
+ -

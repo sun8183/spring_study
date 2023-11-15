@@ -1,0 +1,11 @@
+1. 의존관계 ( 스프링 Bean -> IOC 컨테이너에서 관리되는 객체  등록, Dependency Injection) 
+@Controller
+@Service, @Component
+@Repository --> 구현체에 등록 , 어노테이션을 이용한 컴포넌트 스캔 방식 
+
+@Autowired : 변수 의존성 주입 ( Spring 컨테이너에 올라가는 것만 적용가능 )
+
+스프링은 스프링 컨테이너에 스프링 빈을 등록할 때 기본으로 싱글톤으로 등록한다.  
+
+2. 자바코드로 직접 스프링 빈 등록하기 , 설정파일을 생성할 때 Repository 변경없이 교체가능 
+SpringConfig파일 생성후 @Configuration 어노테이션 사용 
