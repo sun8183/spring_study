@@ -1,0 +1,4 @@
+프로젝트 세팅 환경설정 
+https://start.spring.io/ -> JAVA, Version 세팅 -> 폴더 압축해제후 인텔리제이 세팅 
+
+환경변수 프로젝트 세팅한 JAVA 버전과 맞춰서 세팅후 실행 
