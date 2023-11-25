@@ -1,0 +1,7 @@
+1. equals() : 객체를 동등 비교할 시 같다의 기준을 개발자가 equals 함수를 재정의 하여 사용해야 한다. 
+
+2. hashCode() : hash 객체는 equals 메소드를 재정의 할 시 hashCode를 같이 재정의 해야 한다. 
+ -  equals가 두 객체를 다르다고 판단 했더라도, 두 객체의 hashCode 값은 같을 수 있음 ( 해시충돌 )
+
+3. toString() : toString 재정의를 하지 않을 시 객체 출력에서 값을 출력하지 못한다. 
+ - println -> valueOf 함수 안 코드 객체출력시에 toString 사용
