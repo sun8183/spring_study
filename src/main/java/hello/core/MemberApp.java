@@ -5,10 +5,11 @@ import hello.core.member.Member;
 import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
 
-public class memberApp {
+public class MemberApp {
 
     public static void main(String [] args){
-        MemberService memberService = new MemberServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
         /* 인터페이스 변수에 의존하고 있어 구현체 변경시에 코드 수정이 유연하다. */
 
         /*

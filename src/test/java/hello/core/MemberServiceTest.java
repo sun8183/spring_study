@@ -6,13 +6,19 @@ import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
 
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.FactoryBasedNavigableListAssert.assertThat;
 
 public class MemberServiceTest {
+    MemberService memberService;
 
-    MemberService memberService = new MemberServiceImpl();
+    @BeforeEach /* 테스트 시작 전에 실행된다. ( 의존성 주입 )*/
+    public void beforeEach(){
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.memberService();
+    }
     @Test
     public void joinTest(){
         Member member = new Member(1L, "memberTest", Grade.BASIC);
