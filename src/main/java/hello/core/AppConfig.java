@@ -34,3 +34,17 @@ public class AppConfig {    /* Bean 생성자 주입 */
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 }
+
+/*
+* 1. BeanFactory
+*  - 스프링 최상위 컨테이너
+*  - 스프링 빈을 관리하고 조회하는 역할
+*
+* 2. ApplicationContext - BeanFactory 상속
+*  - BeanFactory의 기능을 모두 상속받아서 제공한다.
+*  - 부가기능
+*  1. 메시지소스를 활용한 국제화 기능
+*  2. 환경변수
+*  3. 애플리케이션 이벤트
+*  4. 편리한 리소스 조회
+* */
