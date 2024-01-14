@@ -1,10 +1,21 @@
 예외처리 
  - 비정상적으로 프로그램을 종료되게 하는 원인 
 
-Error의 종류
+1. Error의 종류
 
 1. 컴파일 에러 : 컴파일 시 발생하는 에러 
 
 2. 런타임 에러 : 실행시 발생하는 에러
 
 Exception : 오류제어 (try-catch), 예외 떠넘기기(throws)
+
+2. 익셉션의 종류 
+Runtime Exception : 실행시 오류발생하여 프로그램 종료 (실행중 발생할 수 있는 예외)
+
+Checked Exception : RuntimeException의 하위 클래스가 아니면서 Exception 클래스의 하위 클래스
+ - 반드시 에러 처리를 해야한다는 특징이 있다. 
+
+3. 다중 예외처리
+ - Exception이 발생할만한 예외를 미리 여러개 지정하여 예외에 맞게 처리 
+
+4. 사용자 정의 Exception - RuntimeException 상속하여 커스텀
