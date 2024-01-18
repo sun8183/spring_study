@@ -1,0 +1,17 @@
+1. 네트워크 프로그래밍 
+ IP : 컴퓨터를 구분하는 주소 
+ port : 컴퓨터 안에 있는 서버들을 구분하는 값
+
+ 도메인(Domain) 주소 : IP주소를 대신하여 읽기 쉽게 변경해서 사용하는 주소
+ 
+# DNS 에서 IP와 도메인 주소를 변환 
+
+* nslookup 도메인 주소 : 도메인 주소의 IP를 확인할 수 있는 명령어 
+
+ * 127.0.0.1 : 컴퓨터 자신의 IP, localhost : 컴퓨터 자신의 도메인 
+
+2. Client & Server 프로그래밍
+ 1) Socket : Server에 접속을 하는 역할 
+ 2) ServerSocket : Client가 접속 요청을 기다리는 역할
+  - Client 요청을 기다리다가 접속을 하면 Socket을 반환한다.
+ 3) Socket과 Socket간에는 IO객체를 이용하여 통신할 수 있다. 
