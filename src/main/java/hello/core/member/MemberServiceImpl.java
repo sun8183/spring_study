@@ -19,7 +19,8 @@ public class MemberServiceImpl implements MemberService{
         return memberRepository.findById(memberId);
     }
 
-    public void test(){
-        System.out.println("dsdsd");
+    // 싱글톤 테스트 용도
+    public MemberRepository getMemberRepository(){
+        return memberRepository;
     }
 }

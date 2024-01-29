@@ -17,6 +17,7 @@ public class AppConfig {    /* Bean 생성자 주입 */
 
     @Bean   /* @Bean 어노테이션을 시작 후 모두 호출 한다. */
     public MemberRepository memberRepository(){
+        System.out.println("call memberRepository");
         return new MemoryMemberRepository();
     }
 
@@ -26,11 +27,13 @@ public class AppConfig {    /* Bean 생성자 주입 */
     }
     @Bean
     public MemberService memberService(){
+        System.out.println("call memberService");
         return new MemberServiceImpl(memberRepository());
     }
 
     @Bean
     public OrderService orderService(){
+        System.out.println("call orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 }
