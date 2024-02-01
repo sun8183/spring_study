@@ -1,0 +1,14 @@
+1. 컴포넌트 스캔 필터 
+ - includeFilters : 스캔시 포함
+ - excludeFilters : 스캔시 포함하지 않음 
+
+2. 중복 등록과 충돌 2가지 상황
+2-1) 자동 빈 등록된 빈이 충돌할 때 
+ - 컴포넌트 스캔에서 같은 빈 이름을 등록하면 ConflictingBeanDefinitionException 발생 
+ 빈이름 지정 @Component("빈이름") --> 충돌 
+
+2-2) 수동으로 등록된 빈이 자동 등록된 빈과 충돌할 때 옵션에 따라 동작 
+ - 이 경우 수동으로 등록된 빈이 우선권을 가진다. (수동으로 등록된 빈이 자동으로 등록된 빈을 오버라이딩 한다.) 
+
+application.properties 파일에 spring.main.allow-bean-definition-overriding=true 일 시 오버라이딩
+false(기본값) 일시 서비스 종료 
