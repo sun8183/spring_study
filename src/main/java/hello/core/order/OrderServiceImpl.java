@@ -5,20 +5,25 @@ import hello.core.discount.FixDiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
+    /* 생성자 주입 */
+    /*
+    lombok라이브러리로 @RequiredArgsConstructor 어노테이션으로 생성자가 자동으로 만들어 진다.
     @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy){
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
-    }
+    }*/
 
 
     @Override

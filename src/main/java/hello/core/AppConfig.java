@@ -35,6 +35,7 @@ public class AppConfig {    /* Bean 생성자 주입 */
     public OrderService orderService(){
         System.out.println("call orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
+        //return null;
     }
 }
 
