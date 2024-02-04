@@ -1,5 +1,6 @@
 package hello.core.order;
 
+import hello.core.annotation.MainDiscountPolicy;
 import hello.core.discount.DiscountPolicy;
 import hello.core.discount.FixDiscountPolicy;
 import hello.core.member.Member;
@@ -7,6 +8,7 @@ import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,6 +16,9 @@ import org.springframework.stereotype.Component;
 public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository;
+
+    //@Qualifier("mainDisountPolicy") - 문자이기 때문에 컴파일 오류를 잡기 힘듬
+    @MainDiscountPolicy
     private final DiscountPolicy discountPolicy;
 
     /* 생성자 주입 */
