@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@Qualifier("mainDisountPolicy")
+//@Qualifier("mainDisountPolicy")
 /* extends : 확장 , implements : 구현 */
 public class RateDiscountPolicy implements DiscountPolicy{
 

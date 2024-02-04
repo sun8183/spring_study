@@ -18,8 +18,8 @@ public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
 
     //@Qualifier("mainDisountPolicy") - 문자이기 때문에 컴파일 오류를 잡기 힘듬
-    @MainDiscountPolicy
-    private final DiscountPolicy discountPolicy;
+    //@MainDiscountPolicy
+    //private final DiscountPolicy discountPolicy;
 
     /* 생성자 주입 */
     /*
@@ -34,8 +34,9 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
         Member member = memberRepository.findById(memberId);
-        int discountPrice = discountPolicy.discount(member, itemPrice); /* 확장성을 고려한 Member 전달 */
+        //int discountPrice = discountPolicy.discount(member, itemPrice); /* 확장성을 고려한 Member 전달 */
 
+        int discountPrice = 0;
         return new Order(memberId, itemName, itemPrice, discountPrice);
     }
 
