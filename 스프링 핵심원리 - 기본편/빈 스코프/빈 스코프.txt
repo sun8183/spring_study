@@ -11,3 +11,17 @@
 1. request : 웹 요청이 들어오고 나갈때 까지 유지되는 스코프
 2. session : 웹 세션이 생성되고 종료될 때 까지 유지되는 스코프
 3. application : 웹의 서블릿 컨텍스와 같은 범위로 유지되는 스코프 
+
+2. 프로토타입 스코프 - 싱글톤 빈과 함께 사용시 문제점 
+ - 싱글톤 객체내에서 프로토 타입 객체는 사용할 때마다 새로 생성하는 것이 아니라 빈이 처음 만들어 지는 순간에만 만들어 진다. (사용자 입장에서 원하는 기능이 아님)
+
+3. 스프링에서 제공하는 Provider로 문제 해결하기 
+ # Dependency Lookup (DL) : 직접 필요한 의존관계를 찾는 것
+ - ObjectFactory, ObjectProvider : 지정한 빈을 컨테이너에서 대신 찾아주는 DL 
+
+ObjectFactory 와 ObjectProvider 차이점
+ObjectProvider는 ObjectFactory를 상속받아 특별한 기능 구현 
+
+4. JSR-330 Provider (자바표준)
+ - javax.inject:javax.inject:1 gradle추가 필요
+ - Provider<T> get() 함수로 사용 
