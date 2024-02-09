@@ -17,6 +17,10 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
+
+	/* 웹 애플리케이션 사용, 내장톰캣 사용 */
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
 	implementation 'javax.inject:javax.inject:1'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'junit:junit:4.13.1'
