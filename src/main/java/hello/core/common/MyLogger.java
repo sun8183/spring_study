@@ -3,12 +3,13 @@ package hello.core.common;
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 
 @Component
-@Scope(value="request") /* HTTP 요청당 1개씩 생성 */
+@Scope(value="request", proxyMode = ScopedProxyMode.TARGET_CLASS) /* HTTP 요청당 1개씩 생성, 가짜 프록시 의존객체 주입 */
 public class MyLogger {
     private String uuid;
 
