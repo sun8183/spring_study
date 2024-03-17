@@ -11,6 +11,6 @@ OneDayStudy - 2024
   1. 스프링 핵심 원리 - 기본편 (완강완료)
   2. 정보처리기사 실기공부, 4월 27일 시험예정
   3. 나를 소개하는 포트폴리오 정리 - 개발, 블로그, 이력서 까지 마무리 하기
-  4. Spring Security, JWT 학습
+  4. Spring Security, JWT, JPA 학습
   5. Error Exception, Validation, Binding, Swagger 학습 후 실제 API 적용하기
   7. 교내 코딩테스트 대회 준비 - 깊이,넓이 우선탐색 알고리즘 익히기 
