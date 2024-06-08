@@ -1,0 +1,58 @@
+/* 기본 margin, padding , border 속성 없애고, 수직 정렬을 기본 기준선에 맞춤 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+/* 새로운 요소들의 대한 스타일 초기화, block 속성으로 블록 레벨 요소로 만든다. */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* 텍스트의 줄 간격 1.6 으로 맞춘다. (원래는 1 이였지만, 나는 1.6이 줄간격 가독성이 좋아 1.6으로 설정) */
+body {
+    line-height: 1.6;
+}
+
+/* 순서요소의 목록 앞의 기본 스타일 제거 */
+ol, ul {
+    list-style: none;
+}
+
+/* 인용문 관련 요소 따옴표 스타일 제거 */
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/* 테이블의 셀 경계를 병합, 셀 사이 간격을 없앰 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* RESET 코드 추가 */
+* {
+    box-sizing: border-box;
+    outline:none;
+}
