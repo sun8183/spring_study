@@ -1,0 +1,98 @@
+.header{
+    position:fixed; /* 헤더 고정*/
+    top:0;
+    left:0;
+    width:100%;
+    background-color: #fff;
+    box-shadow: 0 0 3px #000;
+    z-index:99;
+}
+
+.header_wrapper{
+    display: flex; /* 가로를 기축으로 1차원 정렬 */
+    align-items: center;
+    justify-content: space-between; /* 요소들을 양 끝으로 펼친다.*/
+    height: 60px;
+    padding:0 16px;
+}
+
+.header_start{
+    height: 40px;
+    line-height: 40px;
+}
+
+.header_hamburger{
+    border:none;
+    background-color:transparent; /*투명하게 조절*/
+    font-size:1.5rem;
+}
+
+.header_title{
+    font-size:1.2rem;
+    margin-left:6px;
+}
+
+.header_center{
+    width:50%;
+}
+
+.header_form{
+    display:flex;
+    max-width: 100%;
+}
+
+.header_input_text{
+    width:calc(100% - 60px);
+    height:40px;
+    padding:0 6px;
+    border:1px solid #8f8f8f;
+    border-right:none;
+    border-radius: 2px 0 0 2px;
+}
+
+.header_input_button{
+    width:60px;
+    height:40px;
+    border:1px solid #8f8f8f;
+    border-left:none;
+    border-radius: 0 2px 2px 0;
+}
+
+.header_end{
+    display:flex;
+}
+
+.header_search{
+    display: none;
+    margin-right:5px;
+    border:none;
+    background-color:transparent; /*투명하게 조절*/
+    font-size:1.5rem;
+    cursor:pointer;
+}
+
+.header_profile{
+    width:40px;
+    height:40px;
+    border:1px solid #eaeaea;
+    border-radius: 50%; /* 원 */
+    background-image:url(../imgs/1.png);
+    background-size:40px 40px;
+    cursor:pointer;
+}
+
+/* 미디어 쿼리 사용 */
+@media screen and (max-width:800px){
+    .header_title{
+        display: none;
+    }
+}
+
+@media screen and (max-width:400px){
+    .header_center{
+        display:none;
+    }
+    .header_search{
+        display:block;
+    }
+}
